@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #6f42c1; /* Purple background */
+    margin: 0;
+}
+
+.flashcard-container {
+    perspective: 1000px; /* Adds perspective to the container */
+    margin-bottom: 40px; /* Add space below the flashcard */
+}
+
+.flashcard {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d; /* Keeps the 3D effect */
+    transition: transform 0.6s; /* Smooth transition */
+}
+
+.flashcard .front, 
+.flashcard .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back face when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px; /* Added padding for space */
+}
+
+.front {
+    background: white;
+    color: #333;
+}
+
+.back {
+    background: #f8c74b; /* Yellow background for definition */
+    color: #333;
+    transform: rotateY(180deg); /* Flips the back face */
+}
+
+button {
+    margin: 10px 0; /* Add margin above and below buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.flipped {
+    transform: rotateY(180deg); /* Flip the card */
+}

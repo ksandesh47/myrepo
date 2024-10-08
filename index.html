@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Flashcard App</title>
 </head>
 <body>
-    <h1>This is version V3</h1>
-    <h2>Where is the version 2</h2>
-    <h3> from the web</h3>
-
-    <h1>need to push to remote after pull and edit.</h1>
+    <div class="flashcard-container">
+        <div class="flashcard" id="flashcard">
+            <div class="front">
+                <h2 id="term">Term</h2>
+            </div>
+            <div class="back">
+                <h2 id="definition">Definition</h2>
+            </div>
+        </div>
+    </div>
+    <button id="flip-button">Flip Card</button>
+    <button id="next-button">Next Card</button>
+    <script src="script.js"></script>
 </body>
 </html>
